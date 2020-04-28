@@ -9,13 +9,20 @@ router.get('/', async (req, res) => {
         tasks
     });
 });
-
+//ADD
 router.post('/add', async (req, res) => {
 
     const task = new Task (req.body);
     await task.save();
-    res.send('received');
+    res.redirect('/');
 });
+
+//Delete
+router.get('/delete/:id', async (req, res, next) => {
+    let { id } = req.params;
+    await Task.remove({_id: id});
+    res.redirect('/');
+  });
 
 
 module.exports = router;
