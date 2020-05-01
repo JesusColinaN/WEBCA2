@@ -16,6 +16,9 @@
                            <div class="form-group">
                             <textarea name="description"  cols="80" class="form-control" placeholder="Insert Drink description"></textarea>
                         </div>
+                        <div class="form-group">
+                            <input type="text" name="price" placeholder="Insert Price" class="form-control"> 
+                        </div>
                         <button type="submit" class="btn btn-primary btn-block">
                             Add
                         </button>
@@ -32,8 +35,10 @@
                    <thead>
                        <tr>
                            <th>N*</th>
-                           <th>Title</th>
-                           <th>description</th>
+                           <th>Item</th>
+                           
+                           <th>Description</th>
+                           <th>Price</th>
                            <th>Operation</th>
                        </tr>
                    </thead>
@@ -43,7 +48,9 @@
                         <tr>
                             <td><%= i + 1%></td>
                             <td><strong><%= tasks[i].title %></strong></td>
+                          
                             <td><%= tasks[i].description %></td>
+                            <td>$<%= tasks[i].price %></td>
                             <td>
                                 <a
                   class="<%= tasks[i].status ? 'btn btn-success' : 'btn btn-dark'%>"
