@@ -4,7 +4,8 @@ const morgan = require ('morgan');
 const mongoose = require ('mongoose');
 
 const app = express();
-
+console.log(__dirname);
+app.use('/css', express.static(__dirname +'/public/css'));
 // connecting to db
 mongoose.connect('mongodb+srv://test:test@cluster0-klxv0.mongodb.net/test?retryWrites=true&w=majority');
 mongoose.connection.on('error', (err) => { 
