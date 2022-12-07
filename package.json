@@ -19,7 +19,7 @@
   "homepage": "https://github.com/JesusColinaN/WEBCA2#readme",
   "dependencies": {
     "ejs": "^3.1.2",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongodb": "^3.5.6",
     "mongoose": "^5.9.10",
     "morgan": "^1.10.0"
